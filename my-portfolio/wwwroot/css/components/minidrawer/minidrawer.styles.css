@@ -1,0 +1,21 @@
+.minidrawer {
+  background-color: #37474F !important;
+  color: white !important;
+}
+
+.minidrawer .mud-icon-root {
+  color: white !important;
+}
+
+.minidrawer .mud-nav-link.active:not(.mud-nav-link-disabled) {
+  color: #00d9ff !important;
+}
+
+.minidrawer .mud-nav-link.active:not(.mud-nav-link-disabled) .mud-icon-root {
+  color: #00d9ff !important;
+}
+
+.minidrawer .mud-nav-link.active:not(.mud-nav-link-disabled) .mud-nav-link-text {
+  color: #00d9ff;
+}
+/*# sourceMappingURL=minidrawer.styles.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EAAE,WAAW,EAAE,MAAM;CAAI",
+    "sources": [
+        "spacing.styles.scss"
+    ],
+    "names": [],
+    "file": "spacing.styles.css"
+}

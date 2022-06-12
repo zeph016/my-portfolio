@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EAAE,WAAW,EAAE,qBAAqB;CAAI;;AAEvD,AAAA,OAAO,CAAC;EAAE,SAAS,EAAE,IAAI;CAAI;;AAE7B,AAAA,UAAU,CAAC;EAAE,WAAW,EAAE,IAAI;CAAI;;AAElC,AAAA,YAAY,CAAC;EAAE,UAAU,EAAE,MAAM;CAAI;;AAErC,AAAA,UAAU,CAAC;EAAE,cAAc,EAAE,SAAS;CAAI",
+    "sources": [
+        "fontmod.styles.scss"
+    ],
+    "names": [],
+    "file": "fontmod.styles.css"
+}

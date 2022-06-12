@@ -1,0 +1,14 @@
+.appbar-top {
+  background-color: #fafafa !important;
+  height: 50px;
+}
+
+.appbar-bottom {
+  background-color: #f7f7f8 !important;
+  height: 30px;
+}
+
+.appbar-bottom .mud-toolbar {
+  padding: unset;
+}
+/*# sourceMappingURL=appbar.styles.css.map */

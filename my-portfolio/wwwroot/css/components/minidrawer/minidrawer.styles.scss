@@ -1,0 +1,16 @@
+.minidrawer {
+    background-color: #37474F !important;
+    color: white !important;
+    .mud-icon-root {
+        color: white !important;
+    }
+    .mud-nav-link.active:not(.mud-nav-link-disabled) {
+        color: rgb(0, 217, 255) !important;
+        .mud-icon-root {
+          color: rgb(0, 217, 255) !important;
+        }
+        .mud-nav-link-text {
+            color: rgb(0, 217, 255);
+        }
+    }
+}
