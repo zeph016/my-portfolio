@@ -12,4 +12,8 @@
     <PackageReference Include="MudBlazor" Version="6.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\my-porfolio.domain\my-porfolio.domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "my-portfolio", "my-portfolio\my-portfolio.csproj", "{CF56879C-233B-47F1-86FF-C079A95CDBDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "my-porfolio.domain", "my-porfolio.domain\my-porfolio.domain.csproj", "{6A3307DA-9BA6-4F81-94B0-BA666255EA2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF56879C-233B-47F1-86FF-C079A95CDBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF56879C-233B-47F1-86FF-C079A95CDBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF56879C-233B-47F1-86FF-C079A95CDBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF56879C-233B-47F1-86FF-C079A95CDBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3307DA-9BA6-4F81-94B0-BA666255EA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3307DA-9BA6-4F81-94B0-BA666255EA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3307DA-9BA6-4F81-94B0-BA666255EA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3307DA-9BA6-4F81-94B0-BA666255EA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03969B25-32A0-49B3-BAB3-8E6747D0E5CC}
+	EndGlobalSection
+EndGlobal

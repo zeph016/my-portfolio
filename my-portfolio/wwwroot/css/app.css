@@ -8,6 +8,8 @@
 @import url("./components/mainbodycontainer/mainbodycont.styles.css");
 @import url("./components/dimensions/dimensions.styles.css");
 @import url("./components/colors/colors.styles.css");
+@import url("./components/backgrounds/backgrounds.styles.css");
+@import url("./components/avatar/avatar.styles.css");
 @font-face {
   font-family: "Roboto-Latin-Regular";
   src: url("../fonts/roboto/roboto-v30-latin-regular.woff2") format("woff2");
@@ -80,5 +82,13 @@ a, .btn-link {
 
 .blazor-error-boundary::after {
   content: "An error has occurred.";
+}
+
+.main-bgimage {
+  background-image: url("../images/backgrounds/IMG_2813.JPG");
+}
+
+:root {
+  --mud-palette-primary: #0165BB !important;
 }
 /*# sourceMappingURL=app.css.map */
