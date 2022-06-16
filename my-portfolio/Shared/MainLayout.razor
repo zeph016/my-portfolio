@@ -20,23 +20,33 @@
                 </div>
             </MudDrawerHeader>
             <MudNavMenu>
-                <MudNavLink Class='font13 font-bold wspace-nowrap uppercase' Match="NavLinkMatch.All" Href='/' Icon="@Icons.Filled.AccountCircle">About Me</MudNavLink>
+                <MudNavLink Class='font13 font-bold wspace-nowrap uppercase' Match="NavLinkMatch.All" Href='/about-me' Icon="@Icons.Filled.AccountCircle">About Me</MudNavLink>
                 <MudNavLink Class='font13 font-bold wspace-nowrap uppercase' Match="NavLinkMatch.All" Href='/info' Icon="@Icons.Filled.LibraryBooks">Experience</MudNavLink>
                 <MudNavLink Class='font13 font-bold wspace-nowrap uppercase' Match="NavLinkMatch.All" Href='/blazor-playground' Icon="@Icons.Custom.Brands.MudBlazor">Blazor Playground</MudNavLink>
             </MudNavMenu>
         </MudDrawer>
-    <MudMainContent Class='mainbody-container d-flex'>
-            @Body
+    <MudMainContent Class='mainbody-container d-flex page-background-class'>
+        @Body
     </MudMainContent>
     <MudAppBar Class='appbar-bottom pr-4 pl-4' Elevation='1' Fixed Dense Bottom>
         <MudSpacer />
+        <MudText Class='color-black font12'>
+            <div @ref='timeElement'></div>
+        </MudText>
         <MudIconButton OnClick='ToggleFullScreen'  Icon='@Icons.Material.Filled.Fullscreen' Size='Size.Small' />
     </MudAppBar>
 </MudLayout>
 
 @code {
+    ElementReference timeElement;
     bool _drawerOpen = true;
-
+    private string imageSource = "../images/backgrounds/PatternImage.png";
+   
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await jsRuntimeService.InvokeVoidAsync("startTime", timeElement);
+    }
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;

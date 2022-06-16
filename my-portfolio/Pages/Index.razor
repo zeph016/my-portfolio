@@ -1,96 +1,18 @@
 ﻿@page "/"
 
 @inject NavigationManager navigationManager
-@* <PageTitle>Index</PageTitle> *@
+<PageTitle>Index</PageTitle>
 
 <MudContainer Class='d-flex flex-column pa-2 gap-4' Fixed='false' MaxWidth='MaxWidth.Large'>
-    @* <MudImage Src='@imageSource' Class='rounded-lg' ObjectFit='ObjectFit.Cover' Width="50" Height="50" Alt="bgImage" Elevation="25" /> *@
-    <div class='d-flex flex-1 pa-2 gap-4 mt-16'>
-        <div>
-            <MudCard>
-                <MudCardContent Class='main-avatar-cont d-flex flex-column align-center justify-center'>
-                    <MudImage Src='@imageAvatar' Class='rounded-circle' ObjectFit='ObjectFit.Cover' Width='150' Height='150' />
-                    <MudText Class='font-theramin' Typo='Typo.h6'>Dhaniele Joseph C. Demontaño</MudText>
-                </MudCardContent>
-                <MudCardContent Class='d-flex flex-column gap-2 bgc-d3d3d330'>
-                        <div class='d-flex align-center gap-1'>
-                            <MudIcon Icon='@Icons.Filled.LocationOn' Size='Size.Small' />
-                            <MudText Typo='Typo.body2'>Philippines, Iloilo City, 5000</MudText>
-                        </div>
-                        <div class='d-flex align-center gap-2'>
-                            <MudIcon Icon='@Icons.Filled.CalendarMonth' Size='Size.Small' />
-                            <MudText Typo='Typo.body2'>August 16, 1990</MudText>
-                        </div>
-                        <div class='d-flex align-center gap-2'>
-                            <MudIcon Icon='@Icons.Filled.PhoneIphone' Size='Size.Small' />
-                            <MudText Typo='Typo.body2'>+639664809506</MudText>
-                        </div>
-                        <div class='d-flex align-center gap-2'>
-                            <MudIcon Icon='@Icons.Custom.Brands.GitHub' Size='Size.Small' />
-                            <MudLink Href="https://github.com/zeph016?tab=repositories" Typo='Typo.body2' 
-                            Underline='Underline.None' Color='Color.Default'>
-                                zeph016
-                            </MudLink>
-                            <MudLink Href="https://github.com/zeph016?tab=repositories" Typo='Typo.body2'
-                            Underline='Underline.None' Color='Color.Default'>
-                                <MudIconButton Icon='@Icons.Filled.Link' Size='Size.Small' />
-                            </MudLink>
-                        </div>
-                        <div class='d-flex align-center gap-2'>
-                            <MudIcon Icon='@Icons.Custom.Brands.Facebook' Size='Size.Small' />
-                            <MudLink Href="https://www.facebook.com/dhaniele.demontano/" Typo='Typo.body2' 
-                            Underline='Underline.None' Color='Color.Default'>
-                                dhaniele.demontano
-                            </MudLink>
-                            <MudLink Href="https://www.facebook.com/dhaniele.demontano/" Typo='Typo.body2'
-                            Underline='Underline.None' Color='Color.Default'>
-                                <MudIconButton Icon='@Icons.Filled.Link' Size='Size.Small' />
-                            </MudLink>
-                        </div>
-                        <div class='d-flex align-center gap-2'>
-                            <MudIcon Class='text-center' Icon='fa-brands fa-instagram' Size='Size.Small' />
-                            <MudLink Href="https://www.instagram.com/dhanieledemontano" Typo='Typo.body2' 
-                            Underline='Underline.None' Color='Color.Default'>
-                                dhanieledemontano
-                            </MudLink>
-                            <MudLink Href="https://www.instagram.com/dhanieledemontano" Typo='Typo.body2'
-                            Underline='Underline.None' Color='Color.Default'>
-                                <MudIconButton Icon='@Icons.Filled.Link' Size='Size.Small' />
-                            </MudLink>
-                        </div>
-                    </MudCardContent>
-                <MudCardActions Class='d-flex flex-column align-stretch pa-2 gap-2 bgc-d3d3d330'>
-                        <MudButton Class='' Variant='Variant.Filled' Color='Color.Primary'>Download CV</MudButton>
-                        <MudButton Class='' Variant='Variant.Filled' Color='Color.Primary'>See More</MudButton>
-                </MudCardActions>
-            </MudCard>
-        </div>
-        <div class='d-flex flex-column flex-grow-1'>
-            <MudCard class='flex-grow-1'>
-                <MudCardContent Class='d-flex align-center gap-2 rounded-t bgc-d3d3d330'>
-                    <MudText Typo='Typo.h6'>About Me</MudText>
-                    <MudSpacer />
-                    <MudIcon Class='text-center' Icon='@Icons.Filled.Info' Size='Size.Medium' />
-                </MudCardContent>
-                <MudCardContent>
-
-                </MudCardContent>
-            </MudCard>
-        </div>
-    </div>
+ 
 </MudContainer>
 
 
 
 @code {
-    private string? imageSource = $"images/backgrounds/IMG_2813.JPG", imageAvatar = $"images/myimage.png";
-    protected override async Task OnInitializedAsync()
+   
+    protected override void OnInitialized()
     {
-        
-    }
-
-    private void IconLinks(Enums.LinkType linkType)
-    {
-
+        navigationManager.NavigateTo($"/about-me");
     }
 }

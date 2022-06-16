@@ -93,4 +93,12 @@ a, .btn-link {
 :root {
     --mud-palette-primary: #0165BB !important;
 }
-  
+
+
+.page-background-class {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 0.83)), url('../images/backgrounds/PatternImage.png');
+    // background-image:url('../images/backgrounds/PatternImage.png');
+    background-repeat: repeat;
+    background-size: contain;
+}
