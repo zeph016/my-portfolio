@@ -9,7 +9,7 @@
             <MudCard>
                 <MudCardContent Class='main-avatar-cont d-flex flex-column align-center justify-center'>
                     <MudImage Src='@imageAvatar' Class='rounded-circle' ObjectFit='ObjectFit.Cover' Width='150' Height='150' />
-                    <MudText Class='font-theramin' Typo='Typo.h6'>Dhaniele Joseph C. Demontaño</MudText>
+                    <MudText Class='font-theramin wspace-nowrap' Typo='Typo.h6'>Dhaniele Joseph C. Demontaño</MudText>
                 </MudCardContent>
                 <MudCardContent Class='d-flex flex-column gap-2 bgc-d3d3d330'>
                         <div class='d-flex align-center gap-1'>
@@ -59,20 +59,44 @@
                         </div>
                     </MudCardContent>
                 <MudCardActions Class='d-flex flex-column align-stretch pa-2 gap-2 bgc-d3d3d330'>
-                        <MudButton Class='' Variant='Variant.Filled' Color='Color.Primary'>Download CV</MudButton>
-                        <MudButton Class='' Variant='Variant.Filled' Color='Color.Primary'>See More</MudButton>
+                    <MudButton Class='' Variant='Variant.Filled' Color='Color.Primary'>Download CV</MudButton>
+                    <MudButton Class='' Variant='Variant.Filled' Color='Color.Primary'>See More</MudButton>
                 </MudCardActions>
             </MudCard>
         </div>
         <div class='d-flex flex-column flex-grow-1'>
-            <MudCard class='flex-grow-1'>
+            <MudCard Class='flex-grow-0'>
                 <MudCardContent Class='d-flex align-center gap-2 rounded-t bgc-d3d3d330'>
                     <MudText Typo='Typo.h6'>About Me</MudText>
                     <MudSpacer />
                     <MudIcon Class='text-center' Icon='@Icons.Filled.Info' Size='Size.Medium' />
                 </MudCardContent>
                 <MudCardContent>
-
+                    <MudText Typo='Typo.body2'>@firstDesc</MudText>
+                    <br />
+                    <MudText Typo='Typo.body2'>@secondDesc</MudText>
+                </MudCardContent>
+                <MudCardContent Class='d-flex flex-column bgc-d3d3d330 gap-2'>
+                    <MudText Typo='Typo.h6'>A brief things of what I do</MudText>
+                    <MudGrid Spacing=2>
+                        <MudItem xs=6>
+                            <MudPaper Height=15vh>Web Development</MudPaper>
+                        </MudItem>
+                        <MudItem xs=6>
+                            <MudPaper Height=15vh>Windows Applications</MudPaper>
+                        </MudItem>
+                        <MudItem xs=6>
+                            <MudPaper Height=15vh>MS Access VB.NET</MudPaper>
+                        </MudItem>
+                        <MudItem xs=6>
+                            <MudPaper Height=15vh>Computer Hardware</MudPaper>
+                        </MudItem>
+                        <MudItem xs=3/>
+                         <MudItem xs=6>
+                            <MudPaper Height=15vh>Internet of Things</MudPaper>
+                        </MudItem>
+                        <MudItem xs=3/>
+                    </MudGrid>
                 </MudCardContent>
             </MudCard>
         </div>
@@ -82,10 +106,22 @@
 
 
 @code {
+
+    private string firstDesc = string.Empty, secondDesc = string.Empty;
     private string? imageSource = $"images/backgrounds/IMG_2813.JPG", imageAvatar = $"images/myimage.png";
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Task.Delay(1);
+        if (firstRender) {
+            firstDesc = "I'm an IT professional from Iloilo City, Philippines. Mainly, I specialize in Programming using the .NET framework and C# programming language. "
+            + "I'm also adept in Computer Hardware, knowledgeable in Networking and Internet of Things.";
+            secondDesc = "I'm currenly working as a Front-End Web Developer using .NET Framework on Blazor WebAssembly, HTML, CSS and Javascript consuming REST API on MSSQL Database. " 
+            + "Also creating and maintaining WinForm .NET Apps. As well as MS Access systems consuming VB.Net language.";
+        }
+    }
     protected override async Task OnInitializedAsync()
     {
-        
+        await Task.Delay(1);
     }
 
     private void IconLinks(Enums.LinkType linkType)
